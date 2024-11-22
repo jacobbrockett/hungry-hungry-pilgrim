@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine.SceneManagement;
 
 /**
 * class: Obstacle()
@@ -11,6 +10,7 @@ using UnityEngine.SceneManagement;
 */
 public class Obstacle : MonoBehaviour
 {
+    [SerializeField] PlayerInputHandler playerInputHandler; // decrement health
     /**
     * function: Awake()
     * args: None
@@ -32,8 +32,13 @@ public class Obstacle : MonoBehaviour
 
         if (other.CompareTag("Pilgrim")) // ensures object colliding is a player
         {
-            Destroy(other.gameObject);  // destroy the player
-            SceneManager.LoadScene("MainMenu");  // load the main menu scene
+            playerInputHandler.DecrementHealth();
+            Destroy(this.gameObject);
         }
+    }
+
+    public void SetPlayerInputHandler(PlayerInputHandler playerInputHandler)
+    {
+        this.playerInputHandler = playerInputHandler;
     }
 }

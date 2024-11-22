@@ -11,6 +11,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     [SerializeField] GameObject obstaclePrefab;
     [SerializeField] float spawnTimeInterval = 0.5f;
+    [SerializeField] PlayerInputHandler playerInputHandler;
 
     /**
     * function: Start()
@@ -34,6 +35,13 @@ public class ObstacleSpawner : MonoBehaviour
         Vector3 spawnPos = new Vector3(rand_x, 14f, 0);
 
         GameObject newObject = Instantiate(obstaclePrefab, spawnPos, Quaternion.identity);
+
+        Obstacle newObstacle = newObject.GetComponent<Obstacle>();
+
+        if(newObstacle != null)
+        {
+            newObstacle.SetPlayerInputHandler(playerInputHandler);
+        }
     }
 
     /**
