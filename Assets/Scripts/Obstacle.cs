@@ -25,14 +25,14 @@ public class Obstacle : MonoBehaviour
     * function: OnTriggerEnter2D()
     * args: 
     * - Collider2D other: game object with a 2D collider
-    * description: When a player collides with an obstacle, it will destroy the Spaceship object
+    * description: When a player collides with an obstacle, it will destroy the game object
     * and return the player to the main menu
     */
     void OnTriggerEnter2D(Collider2D other){
 
-        if (other.CompareTag("Spaceship")) // ensures object colliding is a Spaceship
+        if (other.CompareTag("Pilgrim")) // ensures object colliding is a player
         {
-            Destroy(other.gameObject);  // destroy the spaceship
+            Destroy(other.gameObject);  // destroy the player
             SceneManager.LoadScene("MainMenu");  // load the main menu scene
         }
     }

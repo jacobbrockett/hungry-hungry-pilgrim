@@ -3,33 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /**
-* class: Spaceship()
+* class: Pilgrim()
 * description: The game object that the player controls
 */
-public class Spaceship : MonoBehaviour
+public class Pilgrim : MonoBehaviour
 {
     Rigidbody2D rb;
 
     [Header("Movement")]
-    [SerializeField] float speed = 10;
+    [SerializeField] float currentSpeed;
+    [SerializeField] float regularSpeed = 10f;
+    [SerializeField] float sleepySpeed = 5f;
 
     /**
     * function: Awake()
     * args: None
-    * description: Get the Spaceship's rigidbody 2D
+    * description: Get the player's rigidbody 2D
     */
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
+        currentSpeed = regularSpeed;
     }
 
     /**
     * function: Move()
     * args:
-    * - Vector3 movement: position to move the Spaceship to
+    * - Vector3 movement: position to move the player object to
     * description: moves the Spaceship to a position passed as a parameter
     */
     public void Move(Vector3 movement)
     {
-        rb.MovePosition(transform.position + (movement * speed) * Time.fixedDeltaTime); // add position to current position
+        rb.MovePosition(transform.position + (movement * currentSpeed) * Time.fixedDeltaTime); // add position to current position
     }
 }

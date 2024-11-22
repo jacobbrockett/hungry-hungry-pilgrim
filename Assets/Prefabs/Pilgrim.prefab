@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4635851873340694348}
   - component: {fileID: 769420874555522854}
   m_Layer: 0
-  m_Name: Spaceship
+  m_Name: Pilgrim
   m_TagString: Spaceship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

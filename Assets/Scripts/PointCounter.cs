@@ -24,6 +24,6 @@ public class PointCounter : MonoBehaviour
     {
         int currentPoints = playerInputHandler.GetCurrentPoints();
 
-        pointText.text = "Point: " + currentPoints.ToString();
+        pointText.text = "Points: " + currentPoints.ToString();
     }
 }

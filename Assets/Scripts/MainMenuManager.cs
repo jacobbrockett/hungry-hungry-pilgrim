@@ -13,7 +13,7 @@ public class MainMenuManager : MonoBehaviour
     */
     public void StartGame()
     {
-        SceneManager.LoadScene("Galaga");
+        SceneManager.LoadScene("Mayflower");
     }
 
     /**
