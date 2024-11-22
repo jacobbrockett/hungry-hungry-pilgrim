@@ -10,6 +10,7 @@ public class PointSpawner : MonoBehaviour
 {
     [SerializeField] GameObject pointPrefab;
     [SerializeField] PlayerInputHandler playerInputHandler;
+    [SerializeField] float SpawnInterval = 2f;
 
     /**
     * function: Start()
@@ -56,7 +57,7 @@ public class PointSpawner : MonoBehaviour
             while(true)
             {
                 SpawnPoint();
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(SpawnInterval);
             }
             
         }

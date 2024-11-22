@@ -17,7 +17,6 @@ public class Point : MonoBehaviour
     * args: None
     * description: destroy point object after 5 seconds (if not collected by player)
     */
-    
     void Awake()
     {
         Destroy(this.gameObject, 5); // destroy game object after 5 seconds
@@ -49,5 +48,10 @@ public class Point : MonoBehaviour
     public void SetPlayerInputHandler(PlayerInputHandler playerInputHandler)
     {
         this.playerInputHandler = playerInputHandler;
+    }
+
+    public void SetPointValue(int value)
+    {
+        pointValue = value;
     }
 }
