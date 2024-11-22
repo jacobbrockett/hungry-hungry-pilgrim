@@ -35,6 +35,19 @@ public class Point : MonoBehaviour
         {
             playerInputHandler.IncrementPoint(pointValue);
 
+            if (this.CompareTag("TurkeyPoint"))
+            {
+                Debug.Log("Turkey Acquired");
+            }
+            else if(this.CompareTag("MashPoint"))
+            {
+                Debug.Log("Mash Acquired");
+            }
+            else if(this.CompareTag("GravyPoint"))
+            {
+                Debug.Log("Gravy Acquired");
+            }
+
             Destroy(this.gameObject);
         }
     }

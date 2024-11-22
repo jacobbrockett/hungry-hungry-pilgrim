@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurkeyPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 1950212277584922672, guid: 38348f51dc26b4be3a9c6443608cfee2, type: 3}
+      propertyPath: m_TagString
+      value: TurkeyPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 3076999822139040636, guid: 38348f51dc26b4be3a9c6443608cfee2, type: 3}
       propertyPath: pointValue
       value: 10
