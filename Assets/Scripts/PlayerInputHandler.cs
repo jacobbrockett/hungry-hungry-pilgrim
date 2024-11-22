@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+using UnityEngine.SceneManagement;
+
+
 /**
 * class: PlayerInputHandler
 * description: Class is responsible for handling player inputs, tracking points, and passing the coin
@@ -13,8 +16,9 @@ public class PlayerInputHandler : MonoBehaviour
     [Header("Sprites")]
     [SerializeField] Pilgrim playerPilgrim;
 
-    [Header("Points")]
+    [Header("Stats")]
     [SerializeField] int currentPoints = 0;
+    [SerializeField] int currentHealth = 5;
 
     [Header("Audio")]
     [SerializeField] AudioSource coinAudioSource; // or GetComponent<AudioSource>()
@@ -44,6 +48,16 @@ public class PlayerInputHandler : MonoBehaviour
         playerPilgrim.Move(movement);
     }
 
+    void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            Destroy(playerPilgrim.gameObject);  // destroy the player
+            SceneManager.LoadScene("MainMenu");  // load the main menu scene
+         
+        }
+    }
+
     /**
     * function: IncrementPoint()
     * args: None
@@ -52,7 +66,13 @@ public class PlayerInputHandler : MonoBehaviour
     public void IncrementPoint(int addPoints)
     {
         currentPoints = currentPoints + addPoints;
-        coinAudioSource.Play();
+        coinAudioSource.Play(); // TODO: change audio to turkey gobble
+    }
+
+    public void DecrementHealth()
+    {
+        currentHealth = currentHealth - 1;
+        // TODO: add audio source to play
     }
 
     /**
@@ -73,6 +93,11 @@ public class PlayerInputHandler : MonoBehaviour
     public int GetCurrentPoints()
     {
         return currentPoints;
+    }
+
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
     }
 
     

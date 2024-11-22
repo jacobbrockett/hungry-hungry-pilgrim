@@ -6,24 +6,24 @@ using UnityEngine.UI;
 using TMPro;
 
 /**
-* class: PointCounter
+* class: StatsTracker
 * description: class for updating the stats text
 */
-public class PointCounter : MonoBehaviour
+public class StatsTracker : MonoBehaviour
 {
     [SerializeField] PlayerInputHandler playerInputHandler; // always connected to what player is controlling
 
-    [SerializeField] TextMeshProUGUI pointText;
+    [SerializeField] TextMeshProUGUI healthText;
 
     /**
     * function: Update()
     * args: none
-    * description: Update the point counter text with current points
+    * description: Update the text with current health
     */
     void Update()
     {
-        int currentPoints = playerInputHandler.GetCurrentPoints();
+        int currentHealth = playerInputHandler.GetCurrentHealth();
 
-        pointText.text = "Points: " + currentPoints.ToString();
+        healthText.text = "Health: " + currentHealth.ToString();
     }
 }
