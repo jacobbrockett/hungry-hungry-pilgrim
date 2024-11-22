@@ -11,7 +11,7 @@ using UnityEngine.Audio;
 public class PlayerInputHandler : MonoBehaviour
 {
     [Header("Sprites")]
-    [SerializeField] Spaceship playerShip;
+    [SerializeField] Pilgrim playerPilgrim;
 
     [Header("Points")]
     [SerializeField] int currentPoints = 0;
@@ -41,28 +41,28 @@ public class PlayerInputHandler : MonoBehaviour
         }
 
         // Move player ship:
-        playerShip.Move(movement);
+        playerPilgrim.Move(movement);
     }
 
     /**
     * function: IncrementPoint()
     * args: None
-    * description: Increments the current points field by one and plays the coin audio source
+    * description: Increments the current points field and plays the coin audio source
     */
-    public void IncrementPoint()
+    public void IncrementPoint(int addPoints)
     {
-        currentPoints = currentPoints + 1;
+        currentPoints = currentPoints + addPoints;
         coinAudioSource.Play();
     }
 
     /**
-    * function: GetPlayerShip()
+    * function: GetPlayerGameObject()
     * args: None
-    * description: Getter for player ship field
+    * description: Getter for player game object field
     */
-    public Spaceship GetPlayerShip()
+    public Pilgrim GetPlayerGameObject()
     {
-        return playerShip;
+        return playerPilgrim;
     }
 
     /**

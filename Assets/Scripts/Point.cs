@@ -10,12 +10,14 @@ using UnityEngine;
 public class Point : MonoBehaviour
 {
     [SerializeField] PlayerInputHandler playerInputHandler; // necessary for incrementing point count and coin audio source
+    [SerializeField] int pointValue = 1;
 
     /**
     * function: Awake()
     * args: None
     * description: destroy point object after 5 seconds (if not collected by player)
     */
+    
     void Awake()
     {
         Destroy(this.gameObject, 5); // destroy game object after 5 seconds
@@ -29,11 +31,13 @@ public class Point : MonoBehaviour
     * play a coin audio source
     */
     void OnTriggerEnter2D(Collider2D other){
-        // Debug.Log("Add a point!");
 
-        playerInputHandler.IncrementPoint();
+        if (other.CompareTag("Pilgrim")) // ensures object colliding is a player
+        {
+            playerInputHandler.IncrementPoint(pointValue);
 
-        Destroy(this.gameObject);
+            Destroy(this.gameObject);
+        }
     }
 
     /**

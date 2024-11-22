@@ -314,7 +314,7 @@ Transform:
   m_GameObject: {fileID: 548503772}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.0895247, y: 4.063016, z: -0.0575037}
+  m_LocalPosition: {x: 0, y: 12, z: -0.0575037}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f586b42e267fb4ab39e342625e9b9379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerShip: {fileID: 4473389671327928284}
+  playerPilgrim: {fileID: 4473389671327928284}
   currentPoints: 0
   coinAudioSource: {fileID: 915255277}
 --- !u!4 &915255276
@@ -882,6 +882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 8995042946067586679, guid: 3e814f17d6a584afbae615094da9f06f, type: 3}
+  spawnTimeInterval: 0.5
 --- !u!4 &1616998208
 Transform:
   m_ObjectHideFlags: 0
@@ -907,7 +908,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4434576873022943188, guid: d51474918dce94604bf81bb9604844ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4434576873022943188, guid: d51474918dce94604bf81bb9604844ef, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1132,7 +1133,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4129590590048332629, guid: ae9d66b2bfc4d4766a4f3579ee0ec6fb, type: 3}
       propertyPath: m_Name
-      value: Spaceship
+      value: Pilgrim
+      objectReference: {fileID: 0}
+    - target: {fileID: 4129590590048332629, guid: ae9d66b2bfc4d4766a4f3579ee0ec6fb, type: 3}
+      propertyPath: m_TagString
+      value: Pilgrim
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1160,7 +1165,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4434576873022943188, guid: d51474918dce94604bf81bb9604844ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 4434576873022943188, guid: d51474918dce94604bf81bb9604844ef, type: 3}
       propertyPath: m_LocalPosition.y
