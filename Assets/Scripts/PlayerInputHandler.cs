@@ -16,9 +16,14 @@ public class PlayerInputHandler : MonoBehaviour
     [Header("Sprites")]
     [SerializeField] Pilgrim playerPilgrim;
 
-    [Header("Stats")]
+    [Header("Points")]
     [SerializeField] int currentPoints = 0;
+    [Header("Health")]
     [SerializeField] int currentHealth = 5;
+    [SerializeField] int maxHealth = 5;
+    [Header("Tryptophan Effect")]
+    [SerializeField] int currentTryptophan;
+    [SerializeField] int maxTryptophan = 5;
 
     [Header("Audio")]
     [SerializeField] AudioSource coinAudioSource; // or GetComponent<AudioSource>()
@@ -54,7 +59,11 @@ public class PlayerInputHandler : MonoBehaviour
         {
             Destroy(playerPilgrim.gameObject);  // destroy the player
             SceneManager.LoadScene("MainMenu");  // load the main menu scene
-         
+        }
+
+        if (currentTryptophan == maxTryptophan)
+        {
+            playerPilgrim.TryptophanEffect(this);
         }
     }
 
@@ -73,6 +82,16 @@ public class PlayerInputHandler : MonoBehaviour
     {
         currentHealth = currentHealth - 1;
         // TODO: add audio source to play
+    }
+
+    public void IncrementTryptophan()
+    {
+        currentTryptophan = currentTryptophan + 1;
+    }
+
+    public void ResetTryptophan()
+    {
+        currentTryptophan = 0;
     }
 
     /**
@@ -98,6 +117,11 @@ public class PlayerInputHandler : MonoBehaviour
     public int GetCurrentHealth()
     {
         return currentHealth;
+    }
+
+    public int GetMaxHealth()
+    {
+        return maxHealth;
     }
 
     

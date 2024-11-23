@@ -38,6 +38,7 @@ public class Point : MonoBehaviour
             if (this.CompareTag("TurkeyPoint"))
             {
                 Debug.Log("Turkey Acquired");
+                playerInputHandler.IncrementTryptophan();
             }
             else if(this.CompareTag("MashPoint"))
             {

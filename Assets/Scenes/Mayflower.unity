@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GravySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 192638696365627400, guid: f0665633bf7d34a34afee09e970000be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1939178395574529290, guid: f0665633bf7d34a34afee09e970000be, type: 3}
       propertyPath: pointPrefab
       value: 
@@ -284,6 +288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MashSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 1739885712710646527, guid: 16411a862787b4de68b419acc5c6fab2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8034685627790094035, guid: 16411a862787b4de68b419acc5c6fab2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -407,6 +415,9 @@ MonoBehaviour:
   playerPilgrim: {fileID: 4473389671327928284}
   currentPoints: 0
   currentHealth: 5
+  maxHealth: 5
+  currentTryptophan: 0
+  maxTryptophan: 5
   coinAudioSource: {fileID: 915255277}
 --- !u!4 &915255276
 Transform:
@@ -1342,7 +1353,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2908133221013278665, guid: db4d6876f65874dc48c08011fda95dea, type: 3}
       propertyPath: SpawnInterval
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2908133221013278665, guid: db4d6876f65874dc48c08011fda95dea, type: 3}
       propertyPath: playerInputHandler

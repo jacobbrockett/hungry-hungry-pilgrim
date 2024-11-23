@@ -1,29 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 // Must Include:
 using UnityEngine.UI;
 using TMPro;
 
-/**
-* class: StatsTracker
-* description: class for updating the stats text
-*/
 public class StatsTracker : MonoBehaviour
 {
     [SerializeField] PlayerInputHandler playerInputHandler; // always connected to what player is controlling
 
-    [SerializeField] TextMeshProUGUI healthText;
+    [SerializeField] TextMeshProUGUI pointText;
 
     /**
     * function: Update()
     * args: none
-    * description: Update the text with current health
+    * description: Update the point counter text with current points
     */
     void Update()
     {
-        int currentHealth = playerInputHandler.GetCurrentHealth();
+        // Update Points:
+        int currentPoints = playerInputHandler.GetCurrentPoints();
+        pointText.text = "Points: " + currentPoints.ToString();
 
-        healthText.text = "Health: " + currentHealth.ToString();
+        // Update Health:
     }
 }
