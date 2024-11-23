@@ -24,6 +24,7 @@ public class PlayerInputHandler : MonoBehaviour
     [Header("Tryptophan Effect")]
     [SerializeField] int currentTryptophan;
     [SerializeField] int maxTryptophan = 5;
+    [SerializeField] bool sleepyTime = false;
 
     [Header("Audio")]
     [SerializeField] AudioSource coinAudioSource; // or GetComponent<AudioSource>()
@@ -122,6 +123,26 @@ public class PlayerInputHandler : MonoBehaviour
     public int GetMaxHealth()
     {
         return maxHealth;
+    }
+
+    public int GetCurrentTryptophan()
+    {
+        return currentTryptophan;
+    }
+
+    public int GetMaxTryptophan()
+    {
+        return maxTryptophan;
+    }
+
+    public bool GetSleepyTime()
+    {
+        return sleepyTime;
+    }
+
+    public void SetSleepyTime(bool slumped)
+    {
+        this.sleepyTime = slumped;
     }
 
     

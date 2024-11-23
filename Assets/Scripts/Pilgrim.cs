@@ -46,10 +46,11 @@ public class Pilgrim : MonoBehaviour
         {
             print("Sleepy Time!");
             currentSpeed = sleepySpeed;
+            playerInputHandler.SetSleepyTime(true);
             yield return new WaitForSeconds(sleepyTimeInterval);
+            playerInputHandler.SetSleepyTime(false);
             currentSpeed = regularSpeed;
             playerInputHandler.ResetTryptophan();
-            // TODO: show visual
         }
     }
 }
