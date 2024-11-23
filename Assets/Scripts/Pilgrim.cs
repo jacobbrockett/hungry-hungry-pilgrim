@@ -14,6 +14,8 @@ public class Pilgrim : MonoBehaviour
     [SerializeField] float currentSpeed;
     [SerializeField] float regularSpeed = 10f;
     [SerializeField] float sleepySpeed = 5f;
+    [Header("Effects")]
+    [SerializeField] int sleepyTimeInterval = 5;
 
     /**
     * function: Awake()
@@ -34,5 +36,21 @@ public class Pilgrim : MonoBehaviour
     public void Move(Vector3 movement)
     {
         rb.MovePosition(transform.position + (movement * currentSpeed) * Time.fixedDeltaTime); // add position to current position
+    }
+
+    public void TryptophanEffect(PlayerInputHandler playerInputHandler)
+    {
+        StartCoroutine(SleepyRoutine());
+
+        IEnumerator SleepyRoutine()
+        {
+            print("Sleepy Time!");
+            currentSpeed = sleepySpeed;
+            playerInputHandler.SetSleepyTime(true);
+            yield return new WaitForSeconds(sleepyTimeInterval);
+            playerInputHandler.SetSleepyTime(false);
+            currentSpeed = regularSpeed;
+            playerInputHandler.ResetTryptophan();
+        }
     }
 }

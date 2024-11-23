@@ -8,6 +8,7 @@ TagManager:
   - TurkeyPoint
   - MashPoint
   - GravyPoint
+  - Spaceship
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Game Objects
   - 
   - 
   - 
@@ -42,6 +43,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: UI Elements
+    uniqueID: 247859567
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Game Objects
+    uniqueID: 2626944381
     locked: 0

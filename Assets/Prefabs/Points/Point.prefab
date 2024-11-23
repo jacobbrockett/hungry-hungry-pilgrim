@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2680775712338046587}
   - component: {fileID: 3076999822139040636}
   - component: {fileID: 8063231599269538146}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1668022915
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInputHandler: {fileID: 0}
+  pointValue: 1
 --- !u!50 &8063231599269538146
 Rigidbody2D:
   serializedVersion: 4
