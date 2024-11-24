@@ -27,7 +27,9 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField] bool sleepyTime = false;
 
     [Header("Audio")]
-    [SerializeField] AudioSource coinAudioSource; // or GetComponent<AudioSource>()
+    [SerializeField] AudioSource healthAudioSource; // or GetComponent<AudioSource>()
+    [SerializeField] AudioSource gobbleAudioSource;
+    [SerializeField] AudioSource damageAudioSource;
 
     /**
     * function: FixedUpdate()
@@ -76,13 +78,13 @@ public class PlayerInputHandler : MonoBehaviour
     public void IncrementPoint(int addPoints)
     {
         currentPoints = currentPoints + addPoints;
-        coinAudioSource.Play(); // TODO: change audio to turkey gobble
+        gobbleAudioSource.Play();
     }
 
     public void DecrementHealth()
     {
         currentHealth = currentHealth - 1;
-        // TODO: add audio source to play
+        damageAudioSource.Play();
     }
 
     public void IncrementHealth()
@@ -94,8 +96,8 @@ public class PlayerInputHandler : MonoBehaviour
         else
         {
             currentHealth = currentHealth + 1;
+            healthAudioSource.Play();
         }
-        
     }
 
     public void IncrementTryptophan()
