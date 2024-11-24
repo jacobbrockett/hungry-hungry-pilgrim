@@ -583,8 +583,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -842,7 +842,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.45772517, g: 0.66055256, b: 0.6981132, a: 0}
+  m_BackGroundColor: {r: 0.7075472, g: 0.66924816, b: 0.59073514, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1649,7 +1649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPrefab: {fileID: 420821183456384634, guid: 6ca38d1943e754f96a3c145ed49c9ccd, type: 3}
   playerInputHandler: {fileID: 915255275}
-  SpawnInterval: 3
+  SpawnInterval: 5
 --- !u!1001 &1302802496416775000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1660,7 +1660,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2908133221013278665, guid: db4d6876f65874dc48c08011fda95dea, type: 3}
       propertyPath: SpawnInterval
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2908133221013278665, guid: db4d6876f65874dc48c08011fda95dea, type: 3}
       propertyPath: playerInputHandler
@@ -1729,7 +1729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 21973850561627925, guid: ae9d66b2bfc4d4766a4f3579ee0ec6fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 21973850561627925, guid: ae9d66b2bfc4d4766a4f3579ee0ec6fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1763,25 +1763,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 439327654709749625, guid: ae9d66b2bfc4d4766a4f3579ee0ec6fb, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 439327654709749625, guid: ae9d66b2bfc4d4766a4f3579ee0ec6fb, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1668022915
-      objectReference: {fileID: 0}
     - target: {fileID: 4129590590048332629, guid: ae9d66b2bfc4d4766a4f3579ee0ec6fb, type: 3}
       propertyPath: m_Name
       value: Pilgrim
       objectReference: {fileID: 0}
-    - target: {fileID: 4129590590048332629, guid: ae9d66b2bfc4d4766a4f3579ee0ec6fb, type: 3}
-      propertyPath: m_Layer
-      value: 6
+    - target: {fileID: 6100804787949615431, guid: ae9d66b2bfc4d4766a4f3579ee0ec6fb, type: 3}
+      propertyPath: sleepySpeed
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 4129590590048332629, guid: ae9d66b2bfc4d4766a4f3579ee0ec6fb, type: 3}
-      propertyPath: m_TagString
-      value: Pilgrim
+    - target: {fileID: 6100804787949615431, guid: ae9d66b2bfc4d4766a4f3579ee0ec6fb, type: 3}
+      propertyPath: regularSpeed
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

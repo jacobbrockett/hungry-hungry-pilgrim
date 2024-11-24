@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 182371035930301312, guid: 38348f51dc26b4be3a9c6443608cfee2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 182371035930301312, guid: 38348f51dc26b4be3a9c6443608cfee2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 182371035930301312, guid: 38348f51dc26b4be3a9c6443608cfee2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 182371035930301312, guid: 38348f51dc26b4be3a9c6443608cfee2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -56,9 +68,21 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GravyPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 2680775712338046587, guid: 38348f51dc26b4be3a9c6443608cfee2, type: 3}
+      propertyPath: m_Radius
+      value: 0.5277241
+      objectReference: {fileID: 0}
+    - target: {fileID: 2680775712338046587, guid: 38348f51dc26b4be3a9c6443608cfee2, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0072957873
+      objectReference: {fileID: 0}
+    - target: {fileID: 3647943005979396410, guid: 38348f51dc26b4be3a9c6443608cfee2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 37eeb5b465ab44b72aff40954959e9d4, type: 3}
     - target: {fileID: 3647943005979396410, guid: 38348f51dc26b4be3a9c6443608cfee2, type: 3}
       propertyPath: m_Color.b
-      value: 0.07406521
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3647943005979396410, guid: 38348f51dc26b4be3a9c6443608cfee2, type: 3}
       propertyPath: m_Color.g
@@ -66,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3647943005979396410, guid: 38348f51dc26b4be3a9c6443608cfee2, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
