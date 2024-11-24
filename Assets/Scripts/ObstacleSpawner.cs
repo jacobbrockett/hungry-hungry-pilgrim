@@ -10,8 +10,8 @@ public class ObstacleSpawner : MonoBehaviour
 {
 
     [SerializeField] GameObject obstaclePrefab;
-    [SerializeField] float spawnTimeInterval = 0.5f;
     [SerializeField] PlayerInputHandler playerInputHandler;
+    [SerializeField] float SpawnInterval = 0.5f;
 
     /**
     * function: Start()
@@ -58,7 +58,7 @@ public class ObstacleSpawner : MonoBehaviour
             while(true)
             {
                 SpawnObstacle();
-                yield return new WaitForSeconds(spawnTimeInterval);
+                yield return new WaitForSeconds(SpawnInterval);
             }
             
         }

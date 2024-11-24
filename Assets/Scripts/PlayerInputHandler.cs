@@ -85,6 +85,19 @@ public class PlayerInputHandler : MonoBehaviour
         // TODO: add audio source to play
     }
 
+    public void IncrementHealth()
+    {
+        if (currentHealth == maxHealth)
+        {
+            return;
+        }
+        else
+        {
+            currentHealth = currentHealth + 1;
+        }
+        
+    }
+
     public void IncrementTryptophan()
     {
         currentTryptophan = currentTryptophan + 1;
